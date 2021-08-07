@@ -1,0 +1,22 @@
+
+body {
+    font-family: 'Antic Slab', serif;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .alert {
+        font-size: 17px;
+    }
+      } 
+  
+
+@media only screen and (max-width: 600px) {
+    .alert {
+        font-size: 13px;
+    }
+
+    .link-repo {
+        font-size: 13px; 
+    }
+      }
