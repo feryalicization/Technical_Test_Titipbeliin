@@ -15,7 +15,9 @@ for page_nb in range(0,21):
     for product_tree in tree.xpath('//div[contains(@data-cel-widget, "search_result_")]'):
         title = product_tree.xpath('.//span[@class="a-size-medium a-color-base a-text-normal"]/text()')
         price = product_tree.xpath('.//span[@class="a-offscreen"]/text()')
-        img_url = product_tree.xpath('.//img[@class="s-image"]/text()')
+  
+        img = driver.find_element_by_class_name("s-image").get_attribute("src")     
+        img_url = f'[{img}]'
 
         print(title, price, img_url)
     print("\n\n\n\n\n\n")
