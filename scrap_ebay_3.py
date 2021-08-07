@@ -19,7 +19,10 @@ for product in tree.xpath('//div[contains(@id,"CenterPanelInternal")]'):
     price = product.xpath('.//span[@id="convbinPrice"]/text()')
     total_price = f'Harga Produk: {price}'
  
-    print(title_name, total_price)
+    img = driver.find_element_by_id("icImg").get_attribute("src")
+    img_url = f'img_url: [{img}]'
+
+    print(title_name, total_price, img_url)
 
 driver.close()
      

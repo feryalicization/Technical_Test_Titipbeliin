@@ -12,14 +12,17 @@ sleep(1)
 
 tree = html.fromstring(driver.page_source)
 
-for product_center in tree.xpath('//div[contains(@class,"centerColAlign centerColAlign-bbcxoverride")]'):
+for product_center in tree.xpath('//div[contains(@id,"ppd")]'):
     title = product_center.xpath('.//span[@class="a-size-large product-title-word-break"]/text()')
     title_name = f'Nama Produk: {title}'
 
     price = product_center.xpath('.//span[@class="a-size-medium a-color-price priceBlockBuyingPriceString"]/text()')
     total_price = f'Harga Produk: {price}'
  
-    print(title_name, total_price)
+    img = driver.find_element_by_id("landingImage").get_attribute("src")
+    img_url = f'img_url: [{img}]'
+    
+    print(title_name, total_price, img_url)
 
 driver.close()
      
