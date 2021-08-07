@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+{% load static %}
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <title>Technical Test Titipbeliin</title>
+  </head>
+  <body>
+
+<br>
+
+ <!-- Navbar  -->
+ <div class="container">
+     <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'img/navbar.svg' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Technical Test Titipbeliin
+          </a>
+        </div>
+      </nav>
+ </div>
+ 
+ <br><br>
+ 
+<!-- Url Box -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hey</strong>, Just paste your Amazon/Ebay link here.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Paste link" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Click</button>
+              </form>
+        </div>
+    </div>  
+</div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  </body>
+</html>
